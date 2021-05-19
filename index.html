@@ -13,15 +13,23 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Nom Fleuriste</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="#bouquets">Bouquet de roses</a>
-            <a class="nav-link active" aria-current="page" href="#anniv">Anniversaire</a>
-            <a class="nav-link active" aria-current="page" href="#plants">Plantes</a>
-            <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-basket-fill"></i></a>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Bouquets de roses</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Anniversaire</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Plantes</a>
+            </li>
+          </ul>
+          <div class="d-flex">
+            <button class="btn btn-outline-success" type="submit"><i class="bi bi-cart"></i></button>
           </div>
         </div>
       </div>
