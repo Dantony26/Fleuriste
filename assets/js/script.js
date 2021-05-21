@@ -1,7 +1,7 @@
 let bouquetBloc = document.getElementById('bouquetBloc');
 let annivBloc = document.getElementById('annivBloc');
 let plantBloc = document.getElementById('plantBloc');
-
+let reloadCart = document.getElementById("reloadCart");
 
 document.getElementById('bouquetButton').addEventListener('click', function () {
 
@@ -45,52 +45,145 @@ let addToCart = document.querySelectorAll(".addToCart");
 addToCart.forEach(element => {
     element.addEventListener('click', function () {
         let retrievedDataFromLocalStorage = localStorage.getItem('addToCart');
+
         if (retrievedDataFromLocalStorage == null) {
+
             localStorage.setItem("addToCart", JSON.stringify([products[this.value]]));
+
         } else {
+
             jsonData = JSON.parse(retrievedDataFromLocalStorage);
-            jsonData.push(products[this.value]);
-            localStorage.setItem("addToCart", JSON.stringify(jsonData));
+            let arrayRef = [];
+            jsonData.forEach(t => {
+                arrayRef.push(t.ref);
+            });
+            if (arrayRef.includes(products[this.value].ref)) {
+                jsonData[this.value].qty++;
+                localStorage.setItem("addToCart", JSON.stringify(jsonData));
+            } else {
+                jsonData.push(products[this.value]);
+                localStorage.setItem("addToCart", JSON.stringify(jsonData));
+            }
         }
     });
 });
 
-let cartToFill  = document.getElementById('cartToFill');
-localStorageData = JSON.parse(localStorage.addToCart);
-if (localStorageData != null) {
-    localStorageData.forEach((element, key) => {
-        if(element != null) {
-            cartToFill.innerHTML += `<div id="product_${key}">
-            <div class="d-flex flex-row justify-content-between mb-5">
-              <div class="d-flex flex-row row gx-0">
-                <div class="border me-5 col-4"><img class= "w-100"src="assets/img/${element.img}" alt=""></div>
-              <div class="border col-4">
-                <p class="my-2 me-2">${element.productName}</p>
-                  <p class="my-2 me-2">${element.price}€</p>
-                <div class="d-flex flex-row align-middle">
-                  <p class="my-2 me-2">Quantité</p>
-                  <select class="form-select">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                  </select>
-                </div>
-                <p class="my-2 me-2">Ref: 10${key}</p>
-              </div>
-              </div>
-              <div class="border col-4">
-                <p>prix</p>
-              </div>
-            </div>
-          </div>`;
-        };
-    });
 
-};
+let CartButton = document.getElementById('cartButton');
+
+
+CartButton.addEventListener('click', function () {
+    let cartToFill = document.getElementById('cartToFill');
+    localStorageData = JSON.parse(localStorage.addToCart);
+    if (localStorageData != null) {
+        cartToFill.innerHTML = '<div id="cartContent"></div>';
+        let cartContent = document.getElementById('cartContent');
+        localStorageData.forEach((element, key) => {
+
+            if (element.qty > 0) {
+
+                let test = element.price * element.qty;
+                cartContent.innerHTML += `<div class="productCart" id="product_${key}" value="${key}">
+                    <div class="d-flex flex-row justify-content-between mb-5">
+                      <div class="d-flex flex-row row gx-0">
+                        <div class="border me-5 col-4"><img class= "w-100"src="assets/img/${element.img}" alt=""></div>
+                      <div class="border col-4">
+                        <p class="my-2 me-2">${element.productName}</p>
+                          <p class="my-2 me-2 priceOfArticle" id="priceOfArticle${key}">Prix: ${element.price}€</p>
+                        <div class="d-flex flex-row align-middle">
+                          <p class="my-2 me-2">Quantité: 
+                          <button type="button" class="btn-warning minusButton" value="${key}">-</button> 
+                          <span class="numberOfArticle" id="numberOfArticle${key}">${element.qty}</span>
+                          <button type="button" class="btn-warning plusButton" value="${key}">+</button></p>
+                        </div>
+                        <p class="my-2 me-2">Ref: ${element.ref}</p>
+                      </div>
+                      </div>
+                      <div class="border col-4">
+                        <p>Prix total de cet article: <span class="articlePrice" id="articlePrice${key}">${test.toFixed(2)}</span>€</p>
+                      </div>
+                      <button type="button" class="btn-close deleteButtons" value="${key}"></button>
+                    </div>
+                  </div>`;
+            }
+        });
+        let totalPriceCart = () => {
+            let articlePrice = document.querySelectorAll('.articlePrice');
+            let totalPriceParagraph = document.getElementById('totalPrice');
+            let totalPrice = 0;
+            if (articlePrice.length > 0) {
+                articlePrice.forEach(u => {
+                    totalPrice += parseFloat(u.textContent);
+                    totalPriceParagraph.innerText = `Prix total de la commande : ${totalPrice.toFixed(2)}€`;
+                });
+            } else {
+                totalPriceParagraph.innerText = 'Le panier est vide';
+            }
+        }
+
+        totalPriceCart();
+
+        let deleteButtonsArray = document.querySelectorAll(".deleteButtons");
+        let productCart = document.querySelectorAll(".productCart");
+        deleteButtonsArray.forEach(d => {
+            d.addEventListener("click", function () {
+                articleToDelete = this.value;
+                localStorageData[articleToDelete].qty = 0;
+                localStorage.setItem("addToCart", JSON.stringify(localStorageData));
+                document.getElementById("product_" + articleToDelete).remove();
+                totalPriceCart();
+
+
+            });
+        });
+
+        let decreaseNumberOfArticles = document.querySelectorAll(".minusButton");
+
+        decreaseNumberOfArticles.forEach(m => {
+            m.addEventListener("click", function () {
+                let retrievedDataFromLocalStorage = localStorage.getItem('addToCart');
+                jsonData = JSON.parse(retrievedDataFromLocalStorage);
+                if (jsonData[this.value].qty > 1) {
+                    jsonData[this.value].qty--;
+                    localStorage.setItem("addToCart", JSON.stringify(jsonData));
+                    document.getElementById(`numberOfArticle${this.value}`).innerText = jsonData[this.value].qty;
+                    let totalArticles = jsonData[this.value].price * jsonData[this.value].qty
+                    document.getElementById(`articlePrice${this.value}`).innerText = totalArticles.toFixed(2);
+                    totalPriceCart();
+                } else {
+                    document.getElementById(`product_${this.value}`).outerHTML = '';
+                    jsonData[this.value].qty = 0;
+                    localStorage.setItem("addToCart", JSON.stringify(jsonData));
+                    totalPriceCart();
+                }
+            });
+        });
+
+        let increaseNumberOfArticles = document.querySelectorAll(".plusButton");
+        increaseNumberOfArticles.forEach(p => {
+            p.addEventListener("click", function () {
+                let retrievedDataFromLocalStorage = localStorage.getItem('addToCart');
+                jsonData = JSON.parse(retrievedDataFromLocalStorage);
+                if (jsonData[this.value].qty >= 0) {
+                    jsonData[this.value].qty++;
+                    localStorage.setItem("addToCart", JSON.stringify(jsonData));
+                    document.getElementById(`numberOfArticle${this.value}`).innerText = jsonData[this.value].qty;
+                    let totalArticles = jsonData[this.value].price * jsonData[this.value].qty
+                    document.getElementById(`articlePrice${this.value}`).innerText = totalArticles.toFixed(2);
+                    totalPriceCart();
+                } else {
+                    document.getElementById("product_" + articleToDelete).remove();
+                    totalPriceCart();
+                }
+            });
+        });
+    };
+});
+
+
+document.getElementById('modalPanier').addEventListener('hidden.bs.modal', function () {
+    let cartToFill = document.getElementById('cartToFill');
+    cartToFill.removeChild(document.getElementById('cartContent'));
+    totalPrice.innerHTML = "Le panier est vide";
+
+})
