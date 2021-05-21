@@ -34,7 +34,7 @@
           </li>
         </ul>
         <div class="d-flex">
-          <button class="btn btn-outline-success" type="button" data-bs-toggle="modal" data-bs-target="#modalPanier"><i
+          <button id ="cartButton" class="btn btn-outline-success" type="button" data-bs-toggle="modal" data-bs-target="#modalPanier"><i
               class="bi bi-cart"></i></button>
         </div>
       </div>
@@ -259,14 +259,11 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body" id="cartToFill">
-          
-          <div>
 
-          </div>
         </div>
         <div class="modal-footer">
+          <div id="totalPrice">Total de la commande:</div>
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
         </div>
       </div>
     </div>
