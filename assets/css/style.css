@@ -1,9 +1,39 @@
 .articles {
     height: 90vh;
+    margin: 1rem;
 }
 .content  {
     height: 75vh;
 }
 .modal-dialog {
     max-width: 75%;
+}
+
+.container-fluid {
+    background-color: pink;
+}
+
+.background-image {
+    background-image: url("../img/plume.jpg");
+    background-repeat: no-repeat;
+    height: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.footer {
+    background-color: pink;  
+}
+
+.description {
+    text-align: justify;
+}
+
+.content {
+    border-image: url("../img/gold2.png");
+
+}
+
+body {
+font-family: 'Dancing Script', cursive;
 }
