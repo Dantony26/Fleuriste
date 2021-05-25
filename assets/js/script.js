@@ -85,7 +85,7 @@ CartButton.addEventListener('click', function () {
                 let test = element.price * element.qty;
                 cartContent.innerHTML += `<div class="productCart border my-3" id="product_${key}" value="${key}">
                     <div class="d-flex flex-row justify-content-between p-3">
-                      <div class="d-flex flex-row row gx-0 col-lg-9 col-sm-10 col-9">
+                      <div class="d-flex flex-row row gx-0 col-9">
                         <div class="me-5 col-3 imgCart"><img class= "w-100"src="assets/img/${element.img}" alt=""></div>
                       <div class="col-sm-6 col-9">
                         <p class="my-2 me-2">${element.productName}</p>
@@ -99,7 +99,7 @@ CartButton.addEventListener('click', function () {
                         <p class="my-2 me-2">Ref: ${element.ref}</p>
                       </div>
                       </div>
-                      <div class="col-sm-6 col-3">
+                      <div class="col-3">
                         <p>Total: <span class="articlePrice" id="articlePrice${key}">${test.toFixed(2)}</span>€</p>
                       </div>
                       <button type="button" class="btn-close deleteButtons" value="${key}"></button>
