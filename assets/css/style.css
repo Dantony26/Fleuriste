@@ -1,9 +1,9 @@
 .articles {
-    height: 90vh;
+    height: 60em;
     margin: 1rem;
 }
 .content  {
-    height: 75vh;
+    height: 50em;
 }
 .modal-dialog {
     max-width: 75%;
@@ -57,10 +57,10 @@ body {
         background: none;
     }
     .content {
-        height: 75vh;
+        height: 35em;
     }
     .articles {
-        height: 95vh;
+        height: 45em;
     }
     
 }
@@ -70,6 +70,13 @@ body {
     
     .content img {
         width: 50% !important;
+    }
+    .articles {
+        height: 45em;
+        margin: 1rem;
+    }
+    .content  {
+        height: 35em;
     }
     .image {
         display: flex;
