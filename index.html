@@ -9,221 +9,237 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/products.js"></script>
-  <title>Miracles From Heaven</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&display=swap" rel="stylesheet"> 
+  <title>Miracles From
+  Heaven</title>
 </head>
 
 <body>
-<div class="background-image">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">Miracles From Heaven</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
-        aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarScroll">
-        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-          <li class="nav-item">
-            <a class="nav-link active" id="bouquetButton" aria-current="page" href="#">Bouquets de roses</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" id="annivButton" aria-current="page" href="#">Anniversaire</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" id="plantButton" aria-current="page" href="#">Plantes</a>
-          </li>
-        </ul>
-        <div class="d-flex">
-          <button id ="cartButton" class="btn btn-outline-success" type="button" data-bs-toggle="modal" data-bs-target="#modalPanier"><i
-              class="bi bi-cart-fill text-dark"></i></button>
+  <div class="background-image">
+    <nav class="navbar navbar-expand-lg navbar-light py-0">
+      <div class="container-fluid py-2">
+        <a class="navbar-brand" href="index.html">Miracles From Heaven</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+            <li class="nav-item">
+              <a class="nav-link active" id="bouquetButton" aria-current="page" href="#">Bouquets de roses</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" id="annivButton" aria-current="page" href="#">Anniversaire</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" id="plantButton" aria-current="page" href="#">Plantes</a>
+            </li>
+          </ul>
+          <div class="d-flex">
+            <button id="cartButton" class="btn btn-outline-success" type="button" data-bs-toggle="modal"
+              data-bs-target="#modalPanier"><i class="bi bi-cart-fill text-dark"></i></button>
+          </div>
         </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
-  <div class="container">
-    <div class="row gx-0">
-      <div class="products">
-        <div id="bouquetBloc">
-          <p class="text-center my-5 fs-2">Bouquets</p>
-          <div id="bouquets" class=" d-flex flex-row justify-content-center">
-            <div class="col-4 p-3 border articles bg-light">
-              <div class="content p-3 border">
-                <div class="image">
-                  <img class="pb-3 w-100" src="assets/img/Bouquet1.png" alt="">
+    <div class="container">
+      <div class="row gx-0">
+        <div class="products">
+          <div id="bouquetBloc">
+            <p class="text-center my-5 fs-2 text-success">Bouquets</p>
+            <div id="bouquets" class=" d-flex flex-lg-row flex-column justify-content-center">
+              <div class="col-lg-4 col-sm-12 p-3 border articles bg-light">
+                <div class="content p-3 border">
+                  <div class="image">
+                    <img class="pb-3 w-100" src="assets/img/Bouquet1.png" alt="">
+                  </div>
+                  <div class="desc">
+                    <p class="text-center article fs-3">Vanille fraise</p>
+                    <p class="description">Véritable petit bijou floral, notre bouquet Vanille fraise ne manquera pas de
+                      faire le plus bel
+                      effet
+                      auprès de votre destinataire. Composé en rose et blanc, avec des roses et des hypéricums, ce
+                      ravissant
+                      bouquet rond promet d'accompagner vos plus beaux messages en toute occasion.</p>
+                  </div>
                 </div>
-                <div class="desc">
-                  <p class="text-center article fs-3">Vanille fraise</p>
-                  <p class="description">Véritable petit bijou floral, notre bouquet Vanille fraise ne manquera pas de faire le plus bel
-                    effet
-                    auprès de votre destinataire. Composé en rose et blanc, avec des roses et des hypéricums, ce
-                    ravissant
-                    bouquet rond promet d'accompagner vos plus beaux messages en toute occasion.</p>
-                </div>
-              </div>
-              <p class="text-end price">42.90€</p>
-              <div class="button text-center mt-3">
-                <button value ="0" class="btn btn-primary addToCart">Ajouter au panier</button>
-              </div>
-            </div>
-            <div class="col-4 p-3 border articles bg-light">
-              <div class="content">
-                <div class="image">
-                  <img class="pb-3 w-100" src="assets/img/Bouquet2.png" alt="">
-                </div>
-                <div class="desc">
-                  <p class="text-center article fs-3">Vert coton</p>
-                  <p class="description">La rose blanche se met au service de vos plus belles occasions avec notre bouquet Vert coton.
-                    Composé
-                    par les fleuristes créateurs de la marque Interflora, ce bouquet raffiné et généreux vous invite à
-                    transmettre vos plus beaux sentiments, du simple plaisir d'offrir aux plus grandes cérémonie</p>
+                <p class="text-end price fw-bold">42.90€</p>
+                <div class="button text-center mt-3">
+                  <button value="0" class="btn addToCart fw-bold">Ajouter au panier</button>
                 </div>
               </div>
-              <p class="text-end price">49.90€</p>
-              <div class="button text-center mt-3">
-                <button value ="1" class="btn btn-primary addToCart">Ajouter au panier</button>
-              </div>
-            </div>
-            <div class="col-4 p-3 border articles bg-light">
-              <div class="content p-3 border">
-                <div class="image">
-                  <img class="pb-3 w-100" src="assets/img/Bouquet3.png" alt="">
+              <div class="col-lg-4 col-sm-12 p-3 border articles bg-light">
+                <div class="content p-3 border">
+                  <div class="image">
+                    <img class="pb-3 w-100" src="assets/img/Bouquet2.png" alt="">
+                  </div>
+                  <div class="desc">
+                    <p class="text-center article fs-3">Vert coton</p>
+                    <p class="description">La rose blanche se met au service de vos plus belles occasions avec notre
+                      bouquet Vert coton.
+                      Composé
+                      par les fleuristes créateurs de la marque Interflora, ce bouquet raffiné et généreux vous invite à
+                      transmettre vos plus beaux sentiments, du simple plaisir d'offrir aux plus grandes cérémonies.</p>
+                  </div>
                 </div>
-                <div class="desc">
-                  <p class="text-center article fs-3">Rouge pastel</p>
-                  <p class="description">Du simple plaisir d'offrir de tous les jours aux déclarations enflammées, notre bouquet Rouge
-                    pastel
-                    promet de fleurir vos plus beaux sentiments. Composée de roses, eucalyptus et graminées, cette
-                    création aux couleurs rouge, blanc, rose et saumon ne manquera pas de vanter les charmes de votre
-                    destinataire.</p>
+                <p class="text-end price fw-bold">49.90€</p>
+                <div class="button text-center mt-3">
+                  <button value="1" class="btn addToCart fw-bold">Ajouter au panier</button>
                 </div>
               </div>
-              <p class="text-end price">36.90€</p>
-              <div class="button text-center mt-3">
-                <button value ="2" class="btn btn-primary addToCart">Ajouter au panier</button>
+              <div class="col-lg-4 col-sm-12 p-3 border articles bg-light">
+                <div class="content p-3 border">
+                  <div class="image">
+                    <img class="pb-3 w-100" src="assets/img/Bouquet3.png" alt="">
+                  </div>
+                  <div class="desc">
+                    <p class="text-center article fs-3">Rouge pastel</p>
+                    <p class="description">Du simple plaisir d'offrir de tous les jours aux déclarations enflammées,
+                      notre bouquet Rouge
+                      pastel
+                      promet de fleurir vos plus beaux sentiments. Composée de roses, eucalyptus et graminées, cette
+                      création aux couleurs rouge, blanc, rose et saumon ne manquera pas de vanter les charmes de votre
+                      destinataire.</p>
+                  </div>
+                </div>
+                <p class="text-end price fw-bold">36.90€</p>
+                <div class="button text-center mt-3">
+                  <button value="2" class="btn addToCart fw-bold">Ajouter au panier</button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div id="annivBloc">
-          <p class="text-center my-5 fs-2">Anniversaire</p>
-          <div id="anniv" class=" d-flex flex-row justify-content-center">
-            <div class="col-4 p-3 border articles bg-light">
-              <div class="content p-3 border">
-                <div class="image">
-                  <img class="pb-3 w-100" src="assets/img/Anniv1.png" alt="">
+          <div id="annivBloc">
+            <p class="text-center my-5 fs-2 text-success">Anniversaire</p>
+            <div id="anniv" class=" d-flex flex-lg-row flex-column justify-content-center">
+              <div class="col-lg-4 col-sm-12 p-3 border articles bg-light">
+                <div class="content p-3 border">
+                  <div class="image">
+                    <img class="pb-3 w-100" src="assets/img/Anniv1.png" alt="">
+                  </div>
+                  <div class="desc">
+                    <p class="text-center article fs-3">Parfum de printemps</p>
+                    <p class="description">Créez une heureuse surprise auprès de votre destinataire avec Parfum de
+                      printemps, notre bouquet
+                      champêtre de fleurs roses, parme, violettes et vertes. Composé avec de la rose, du lisianthus et
+                      des
+                      fleurs de saison délicatement mises en valeur par l'eucalyptus, notre bouquet vous invite à
+                      transmettre un message emprunt de tendresse et de générosité.</p>
+                  </div>
                 </div>
-                <div class="desc">
-                  <p class="text-center article fs-3">Parfum de printemps</p>
-                  <p class="description">Créez une heureuse surprise auprès de votre destinataire avec Parfum de printemps, notre bouquet
-                    champêtre de fleurs roses, parme, violettes et vertes. Composé avec de la rose, du lisianthus et des
-                    fleurs de saison délicatement mises en valeur par l'eucalyptus, notre bouquet vous invite à
-                    transmettre un message emprunt de tendresse et de générosité.</p>
-                </div>
-              </div>
-              <p class="text-end price">36.90€</p>
-              <div class="button text-center mt-3">
-                <button value ="3" class="btn btn-primary addToCart">Ajouter au panier</button>
-              </div>
-            </div>
-            <div class="col-4 p-3 border articles bg-light">
-              <div class="content p-3 border">
-                <div class="image">
-                  <img class="pb-3 w-100" src="assets/img/Anniv2.png" alt="">
-                </div>
-                <div class="desc">
-                  <p class="text-center article fs-3">Zeste tendre</p>
-                  <p class="description">Adressez à votre destinataire un message emprunt de fraîcheur et de bonne humeur avec notre
-                    composition4 Zeste tendre. Réalisé avec des roses, des lisianthus et de l'alstroeméria , cet
-                    assemblage de fleurs naturelles aux teintes pastel acidulé promet de provoquer une surprise pleine
-                    d'émotion et de vitalité.</p>
+                <p class="text-end price fw-bold">36.90€</p>
+                <div class="button text-center mt-3">
+                  <button value="3" class="btn addToCart fw-bold">Ajouter au panier</button>
                 </div>
               </div>
-              <p value ="3" class="text-end price">49.90€</p>
-              <div class="button text-center mt-3">
-                <button value ="4" class="btn btn-primary addToCart">Ajouter au panier</button>
-              </div>
-            </div>
-            <div class="col-4 p-3 border articles bg-light">
-              <div class="content p-3 border">
-                <div class="image">
-                  <img class="pb-3 w-100" src="assets/img/Anniv3.png" alt="">
+              <div class="col-lg-4 col-sm-12 p-3 border articles bg-light">
+                <div class="content p-3 border">
+                  <div class="image">
+                    <img class="pb-3 w-100" src="assets/img/Anniv2.png" alt="">
+                  </div>
+                  <div class="desc">
+                    <p class="text-center article fs-3">Zeste tendre</p>
+                    <p class="description">Adressez à votre destinataire un message emprunt de fraîcheur et de bonne
+                      humeur avec notre
+                      composition4 Zeste tendre. Réalisé avec des roses, des lisianthus et de l'alstroeméria , cet
+                      assemblage de fleurs naturelles aux teintes pastel acidulé promet de provoquer une surprise pleine
+                      d'émotion et de vitalité.</p>
+                  </div>
                 </div>
-                <div class="desc">
-                  <p class="text-center article fs-3">Lily</p>
-                  <p class="description">Offrez à votre destinataire un pur moment d'émotion avec notre bouquet Lily, une création originale
-                    et raffinée réalisée avec des roses, lisianthus et eucalyptus dans des tons rouge et abricot. Un
-                    bouquet délicat qui sera le messager de vos plus belles attentions en toute occasion.</p>
+                <p value="3" class="text-end price fw-bold">49.90€</p>
+                <div class="button text-center mt-3">
+                  <button value="4" class="btn addToCart fw-bold">Ajouter au panier</button>
                 </div>
               </div>
-              <p class="text-end price">37.90€</p>
-              <div class="button text-center mt-3">
-                <button value ="5" class="btn btn-primary addToCart">Ajouter au panier</button>
+              <div class="col-lg-4 col-sm-12 p-3 border articles bg-light">
+                <div class="content p-3 border">
+                  <div class="image">
+                    <img class="pb-3 w-100" src="assets/img/Anniv3.png" alt="">
+                  </div>
+                  <div class="desc">
+                    <p class="text-center article fs-3">Lily</p>
+                    <p class="description">Offrez à votre destinataire un pur moment d'émotion avec notre bouquet Lily,
+                      une création originale
+                      et raffinée réalisée avec des roses, lisianthus et eucalyptus dans des tons rouge et abricot. Un
+                      bouquet délicat qui sera le messager de vos plus belles attentions en toute occasion.</p>
+                  </div>
+                </div>
+                <p class="text-end price fw-bold">37.90€</p>
+                <div class="button text-center mt-3">
+                  <button value="5" class="btn addToCart fw-bold">Ajouter au panier</button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div id="plantBloc">
-          <p class="text-center my-5 fs-2">Plantes</p>
-          <div id="plants" class=" d-flex flex-row justify-content-center">
-            <div class="col-4 p-3 border articles bg-light">
-              <div class="content p-3 border">
-                <div class="image">
-                  <img class="pb-3 w-100" src="assets/img/Plante1.png" alt="">
+          <div id="plantBloc">
+            <p class="text-center my-5 fs-2 text-success">Plantes</p>
+            <div id="plants" class=" d-flex flex-lg-row flex-column justify-content-center">
+              <div class="col-lg-4 col-sm-12 p-3 border articles bg-light">
+                <div class="content p-3 border">
+                  <div class="image">
+                    <img class="pb-3 w-100" src="assets/img/Plante1.png" alt="">
+                  </div>
+                  <div class="desc">
+                    <p class="text-center article fs-3">Olivier tige 70 cm</p>
+                    <p class="description">Un olivier sur le balcon et une chaise longue … Vous voilà déjà un peu en
+                      Provence. L’olivier a un
+                      vrai pouvoir évocateur et ne demande qu’à venir diffuser son humeur méditerranéenne sur vos
+                      terrasses
+                      et balcons. Fermez-les yeux, on entend déjà le “csss cssss” des cigales, non ? Diamètre du pot :
+                      17
+                      cm
+                      Hauteur plante : 70 cm Version avec cache pot : 1 cache-pot rond en métal naturel et osier.</p>
+                  </div>
                 </div>
-                <div class="desc">
-                  <p class="text-center article fs-3">Olivier tige 70 cm</p>
-                  <p class="description">Un olivier sur le balcon et une chaise longue … Vous voilà déjà un peu en Provence. L’olivier a un
-                    vrai pouvoir évocateur et ne demande qu’à venir diffuser son humeur méditerranéenne sur vos
-                    terrasses
-                    et balcons. Fermez-les yeux, on entend déjà le “csss cssss” des cigales, non ? Diamètre du pot : 17
-                    cm
-                    Hauteur plante : 70 cm Version avec cache pot : 1 cache-pot rond en métal naturel et osier.</p>
-                </div>
-              </div>
-              <p class="text-end price">32.90€</p>
-              <div class="button text-center mt-3">
-                <button value ="6" class="btn btn-primary addToCart">Ajouter au panier</button>
-              </div>
-            </div>
-            <div class="col-4 p-3 border articles bg-light">
-              <div class="content p-3 border">
-                <div class="image">
-                  <img class="pb-3 w-100" src="assets/img/Plante2.png" alt="">
-                </div>
-                <div class="desc">
-                  <p class="text-center article fs-3">Candide</p>
-                  <p class="description">Avec sa floraison élégante qui évoque l'envol de papillons, notre orchidée phalaenopsis blanche à
-                    deux branches4 d'environ 50 cm vous invite à transmettre votre message avec tact et originalité. Que
-                    votre livraison de fleurs soit prévue sur un lieu de travail ou à la maison, voici une plante
-                    fleurie
-                    qui promet de créer une belle surprise toute en émotion.</p>
+                <p class="text-end price fw-bold">32.90€</p>
+                <div class="button text-center mt-3">
+                  <button value="6" class="btn addToCart fw-bold">Ajouter au panier</button>
                 </div>
               </div>
-              <p class="text-end price">36.90€</p>
-              <div class="button text-center mt-3">
-                <button value ="7" class="btn btn-primary addToCart">Ajouter au panier</button>
-              </div>
-            </div>
-            <div class="col-4 p-3 border articles bg-light">
-              <div class="content p-3 border">
-                <div class="image">
-                  <img class="pb-3 w-100" src="assets/img/Plante3.png" alt="">
+              <div class="col-lg-4 col-sm-12 p-3 border articles bg-light">
+                <div class="content p-3 border">
+                  <div class="image">
+                    <img class="pb-3 w-100" src="assets/img/Plante2.png" alt="">
+                  </div>
+                  <div class="desc">
+                    <p class="text-center article fs-3">Candide</p>
+                    <p class="description">Avec sa floraison élégante qui évoque l'envol de papillons, notre orchidée
+                      phalaenopsis blanche à
+                      deux branches4 d'environ 50 cm vous invite à transmettre votre message avec tact et originalité.
+                      Que
+                      votre livraison de fleurs soit prévue sur un lieu de travail ou à la maison, voici une plante
+                      fleurie
+                      qui promet de créer une belle surprise toute en émotion.</p>
+                  </div>
                 </div>
-                <div class="desc">
-                  <p class="text-center article fs-3">Anthurium</p>
-                  <p class="description">Grand classique parmi les plantes exotiques, l’Anthurium donne l’impression qu’il tire la langue.
-                    Son
-                    extravagance, ses couleurs flamboyantes et ses fleurs en forme de cœur le rendraient-il arrogant ?
-                    Il
-                    est si bon meneur d'ambiance exotique qu’on ne lui en tient pas rigueur.</p>
+                <p class="text-end price fw-bold">36.90€</p>
+                <div class="button text-center mt-3">
+                  <button value="7" class="btn addToCart fw-bold">Ajouter au panier</button>
                 </div>
               </div>
-              <p class="text-end price">32.90€</p>
-              <div class="button text-center mt-3">
-                <button value ="8" class="btn btn-primary addToCart">Ajouter au panier</button>
+              <div class="col-lg-4 col-sm-12 p-3 border articles bg-light">
+                <div class="content p-3 border">
+                  <div class="image">
+                    <img class="pb-3 w-100" src="assets/img/Plante3.png" alt="">
+                  </div>
+                  <div class="desc">
+                    <p class="text-center article fs-3">Anthurium</p>
+                    <p class="description">Grand classique parmi les plantes exotiques, l’Anthurium donne l’impression
+                      qu’il tire la langue.
+                      Son
+                      extravagance, ses couleurs flamboyantes et ses fleurs en forme de cœur le rendraient-il arrogant ?
+                      Il
+                      est si bon meneur d'ambiance exotique qu’on ne lui en tient pas rigueur.</p>
+                  </div>
+                </div>
+                <p class="text-end price fw-bold">32.90€</p>
+                <div class="button text-center mt-3">
+                  <button value="8" class="btn addToCart fw-bold">Ajouter au panier</button>
+                </div>
               </div>
             </div>
           </div>
@@ -231,7 +247,6 @@
       </div>
     </div>
   </div>
-</div>
 
   <footer class="text-dark footer">
     <div class="row gx-0">
@@ -259,10 +274,10 @@
           <h5 class="modal-title">Panier</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body" id="cartToFill"></div>
+        <div class="modal-body py-0" id="cartToFill"></div>
         <div class="modal-footer">
           <div id="totalPrice">Le panier est vide</div>
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
     </div>

@@ -10,11 +10,11 @@
 }
 
 .container-fluid {
-    background-color: pink;
+    background-color:#a5ebcc;
 }
 
 .background-image {
-    background-image: url("../img/plume.jpg");
+    background-image: url("../img/plume2.png");
     background-repeat: no-repeat;
     height: 100%;
     background-size: cover;
@@ -22,18 +22,30 @@
 }
 
 .footer {
-    background-color: pink;  
+    background-color: #a5ebcc;  
 }
 
 .description {
     text-align: justify;
 }
 
-.content {
-    border-image: url("../img/gold2.png");
-
+body {
+    font-family: 'Lora', serif;
 }
 
-body {
-font-family: 'Dancing Script', cursive;
+.btn {
+    background-color: #a5ebcc;
+    border-color: #a5ebcc;
+}
+
+.btn:hover {
+    background-color: #045b66;
+    border-color: #045b66;
+    color: white;
+}
+
+@media screen and (max-width:576px) {
+    .background-image {
+        background: none;
+    }
 }

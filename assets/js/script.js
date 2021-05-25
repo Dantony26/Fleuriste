@@ -83,23 +83,23 @@ CartButton.addEventListener('click', function () {
             if (element.qty > 0) {
 
                 let test = element.price * element.qty;
-                cartContent.innerHTML += `<div class="productCart" id="product_${key}" value="${key}">
-                    <div class="d-flex flex-row justify-content-between mb-5">
+                cartContent.innerHTML += `<div class="productCart border my-3" id="product_${key}" value="${key}">
+                    <div class="d-flex flex-row justify-content-between p-3">
                       <div class="d-flex flex-row row gx-0">
-                        <div class="border me-5 col-4"><img class= "w-100"src="assets/img/${element.img}" alt=""></div>
-                      <div class="border col-4">
+                        <div class="me-5 col-4"><img class= "w-100"src="assets/img/${element.img}" alt=""></div>
+                      <div class="col-4">
                         <p class="my-2 me-2">${element.productName}</p>
                           <p class="my-2 me-2 priceOfArticle" id="priceOfArticle${key}">Prix: ${element.price}€</p>
                         <div class="d-flex flex-row align-middle">
                           <p class="my-2 me-2">Quantité: 
-                          <button type="button" class="btn-warning minusButton" value="${key}">-</button> 
+                          <button type="button" class="btn minusButton" value="${key}">-</button> 
                           <span class="numberOfArticle" id="numberOfArticle${key}">${element.qty}</span>
-                          <button type="button" class="btn-warning plusButton" value="${key}">+</button></p>
+                          <button type="button" class="btn plusButton" value="${key}">+</button></p>
                         </div>
                         <p class="my-2 me-2">Ref: ${element.ref}</p>
                       </div>
                       </div>
-                      <div class="border col-4">
+                      <div class="col-4">
                         <p>Prix total de cet article: <span class="articlePrice" id="articlePrice${key}">${test.toFixed(2)}</span>€</p>
                       </div>
                       <button type="button" class="btn-close deleteButtons" value="${key}"></button>
