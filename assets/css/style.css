@@ -8,7 +8,15 @@
 .modal-dialog {
     max-width: 75%;
 }
-
+#cartButton:hover  > .bi-cart-fill {
+    color: #fff !important;
+}
+.nav-link {
+    color: rgba(0, 0, 0, 0.9) !important;
+}
+.nav-link:hover {
+    color: #045b66 !important;
+}
 .container-fluid {
     background-color:#a5ebcc;
 }
@@ -47,5 +55,24 @@ body {
 @media screen and (max-width:576px) {
     .background-image {
         background: none;
+    }
+    .content {
+        height: 75vh;
+    }
+    .articles {
+        height: 95vh;
+    }
+    
+}
+
+@media screen and (max-width: 1000px) {
+    
+    
+    .content img {
+        width: 50% !important;
+    }
+    .image {
+        display: flex;
+        justify-content: center;
     }
 }
